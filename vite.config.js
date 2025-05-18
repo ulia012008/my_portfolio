@@ -7,7 +7,7 @@ import glob from 'fast-glob';
 
 export default defineConfig(({ command }) => {
   return {
-    base: '/team-project-group-11/',
+    base: '/my_portfolio/',
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },

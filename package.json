@@ -1,12 +1,12 @@
 {
-  "name": "team-project-group-11",
-  "homepage": "https://ulia012008.github.io/team-project-group-11",
+  "name": "my_portfolio",
+  "homepage": "https://github.com/ulia012008/my_portfolio",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --open",
-    "build": "vite build --base=/team-project-group-11/",
+    "build": "vite build --base=/my_portfolio/",
     "preview": "vite preview"
   },
   "devDependencies": {
