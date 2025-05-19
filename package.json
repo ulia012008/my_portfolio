@@ -21,6 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fontsource/inter-tight": "^5.2.5",
     "accordion-js": "^3.4.0",
     "axios": "^1.8.4",
