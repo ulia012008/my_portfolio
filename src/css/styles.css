@@ -47,7 +47,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
 
@@ -220,13 +221,7 @@ header {
   transform: translateX(0);
 }
 
-h1 {
 
-  font-family: var(--second-family);
-  font-weight: 800;
-  font-size: 44px;
-
-}
 
 .home_content {
   display: flex;
@@ -251,4 +246,244 @@ h2 {
   font-size: 24px;
   line-height: 171%;
   letter-spacing: 0.01em;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-top: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+/* ======= Секція Home ======= */
+.home_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.home_content img {
+  width: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.home_content h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.home_content p {
+  max-width: 600px;
+  margin-top: 10px;
+}
+
+/* ======= Секція About ======= */
+.about {
+  padding: 40px 0px;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin-bottom: 16px;
+}
+
+/* ======= Media: ≥768px (планшети) ======= */
+@media (min-width: 768px) {
+  .home_content {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 40px;
+  }
+
+  .home_content img {
+    width: 50%;
+  }
+
+  .home_content h1 {
+    font-size: 32px;
+  }
+
+  .home_content p {
+    font-size: 16px;
+  }
+}
+
+/* ======= Media: ≥1200px (десктопи) ======= */
+@media (min-width: 1200px) {
+  .home_content {
+    padding: 80px 0;
+
+  }
+
+  .home_content h1 {
+
+    font-weight: 800;
+    font-size: 44px;
+  }
+
+  .home_content .about {
+    padding: 60px 0;
+  }
+
+  .about p {
+    font-size: 18px;
+  }
+}
+
+/* ====== Секція Skills ====== */
+/* ======= Skills Section ======= */
+.skills {
+  padding: 60px 20px;
+  background-color: #fefcf9;
+  color: #222;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.skills-category {
+  margin-bottom: 50px;
+}
+
+.skills-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  background-color: #fff6e5;
+  color: #333;
+  border: 1px solid #ffc04d;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, background-color 0.25s, color 0.25s;
+}
+
+.skills-list li:hover {
+  background-color: #ffc04d;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* ======= Responsive ======= */
+@media (min-width: 768px) {
+  .skills h2 {
+    font-size: 2.5rem;
+  }
+
+  .skills-category h3 {
+    font-size: 1.7rem;
+  }
+
+  .skills-list li {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skills {
+    padding: 80px 100px;
+  }
+
+  .skills-list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+/* tech skills */
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #FFA500;
+  /* оранжевий */
+  color: #000;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: #e69500;
+  color: #fff;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fff8ec;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 20px;
+  border-left: 4px solid transparent;
+}
+
+.accordion-content p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.accordion-item.active {
+  border: 2px solid #FFA500;
+  border-radius: 10px;
+  background-color: #fff8ec;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 200px;
+  padding: 10px 20px;
+  border-left: 4px solid #FFA500;
 }

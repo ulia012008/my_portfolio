@@ -19,3 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// accordion
+const accordionItems = document.querySelectorAll('.accordion-item');
+
+accordionItems.forEach(item => {
+  const button = item.querySelector('.accordion-button');
+  button.addEventListener('click', () => {
+    item.classList.toggle('active');
+
+    // Закриває інші
+    accordionItems.forEach(i => {
+      if (i !== item) i.classList.remove('active');
+    });
+  });
+});
